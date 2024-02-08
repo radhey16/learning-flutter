@@ -29,7 +29,7 @@ class LoginPage extends StatelessWidget {
   final userNameController = TextEditingController();
   final passwordController = TextEditingController();
 
-  final _mainUrl = "https://poojabhaumik.com";
+  final _mainUrl = "https://www.linkedin.com/in/radheypatel16/";
 
   Widget _buildHeader(context) {
     return Column(
@@ -79,19 +79,13 @@ class LoginPage extends StatelessWidget {
           child: Column(
             children: [
               Text('Find us on'),
-              Text(_mainUrl),
+              SocialMediaButton.linkedin(
+                  size: 20, url: "https://www.linkedin.com/in/radheypatel16/")
+
             ],
           ),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SocialMediaButton.twitter(
-                size: 20, url: "https://twitter.com/pooja_bhaumik"),
-            SocialMediaButton.linkedin(
-                size: 20, url: "https://linkedin.com/in/poojab26")
-          ],
-        ),
+
       ],
     );
   }
